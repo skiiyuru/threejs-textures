@@ -34,7 +34,8 @@ loadingManager.onError = () => {
 }
 
 const textureLoader = new THREE.TextureLoader(loadingManager)
-const colorTexture = textureLoader.load("/textures/door/color.jpg")
+// const colorTexture = textureLoader.load("/textures/door/color.jpg")
+const colorTexture = textureLoader.load("/textures/minecraft.png")
 const alphaTexture = textureLoader.load("/textures/door/alpha.jpg")
 const heightTexture = textureLoader.load("/textures/door/height.jpg")
 const normalTexture = textureLoader.load("/textures/door/normal.jpg")
@@ -49,10 +50,13 @@ const roughnessTexture = textureLoader.load("/textures/door/roughness.jpg")
 // colorTexture.center.x = 0.5
 // colorTexture.center.y = 0.5
 
-colorTexture.repeat.x = 2
-colorTexture.repeat.y = 2
-colorTexture.wrapS = THREE.MirroredRepeatWrapping
-colorTexture.wrapT = THREE.MirroredRepeatWrapping
+// colorTexture.repeat.x = 2
+// colorTexture.repeat.y = 2
+// colorTexture.wrapS = THREE.MirroredRepeatWrapping
+// colorTexture.wrapT = THREE.MirroredRepeatWrapping
+
+// Texture Filtering & MipMapping
+colorTexture.magFilter = THREE.NearestFilter
 
 /**
  * Base
